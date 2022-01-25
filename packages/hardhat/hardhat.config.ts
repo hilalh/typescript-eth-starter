@@ -8,9 +8,9 @@ if (process.env.NODE_ENV !== "production") {
   dotenv.config();
 }
 
-const INFURA_ID = process.env.INFURA_ID;
-const ALCHEMY_ID = process.env.ALCHEMY_ID;
-const RINKEBY_PRIVATE_KEY = process.env.RINKEBY_PRIVATE_KEY;
+const ETH_URL = process.env.ETH_URL;
+const POLYGON_URL = process.env.POLYGON_URL;
+const ETH_PRIVATE_KEY = process.env.ETH_PRIVATE_KEY;
 const POLYGON_PRIVATE_KEY = process.env.POLYGON_PRIVATE_KEY;
 
 // This is a sample Hardhat task. To learn how to create your own go to
@@ -33,11 +33,11 @@ const config: HardhatUserConfig = {
       chainId: 1337,
     },
     rinkeby: {
-      url: `https://rinkeby.infura.io/v3/${INFURA_ID}`,
-      accounts: [`0x${RINKEBY_PRIVATE_KEY}`],
+      url: `${ETH_URL}`,
+      accounts: [`0x${ETH_PRIVATE_KEY}`],
     },
     matic: {
-      url: `https://polygon-mainnet.g.alchemy.com/v2/${ALCHEMY_ID}`,
+      url: `${POLYGON_URL}`,
       accounts: [`0x${POLYGON_PRIVATE_KEY}`],
     },
   },

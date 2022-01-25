@@ -15,8 +15,8 @@ import {
   MyNFTContractAddress as PolygonMyNFTContractAddress,
 } from '../artifacts/contracts/addresses/maticContractAddress';
 
-const INFURA_ID = process.env.NEXT_PUBLIC_INFURA_ID;
-const ALCHEMY_KEY_MATIC = process.env.NEXT_PUBLIC_ALCHEMY_KEY_MATIC;
+const ETH_URL = process.env.NEXT_PUBLIC_ETH_URL;
+const POLYGON_URL = process.env.NEXT_PUBLIC_POLYGON_URL;
 
 export const devChains: ChainId[] = [ChainId.Localhost];
 
@@ -33,10 +33,10 @@ export const allowedChains: ChainId[] = [
 
 export const getDappConfig = (chainId: number): Config => ({
   readOnlyUrls: {
-    [ChainId.Rinkeby]: `https://ropsten.infura.io/v3/${INFURA_ID}`,
+    [ChainId.Rinkeby]: `${ETH_URL}`,
     [ChainId.Hardhat]: 'http://localhost:8545',
     [ChainId.Localhost]: 'http://localhost:8545',
-    [ChainId.Polygon]: `https://polygon-mainnet.g.alchemy.com/v2/${ALCHEMY_KEY_MATIC}`,
+    [ChainId.Polygon]: `${POLYGON_URL}`,
   },
   supportedChains: [
     ChainId.Mainnet,

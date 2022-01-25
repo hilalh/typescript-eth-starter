@@ -5,12 +5,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "yarn workspace my-eth-starter-frontend-project dev",
+    "dev": "export NODE_OPTIONS=--openssl-legacy-provider && yarn workspace my-eth-starter-frontend-project dev",
     "build": "yarn workspace my-eth-starter-frontend-project build",
     "start": "yarn workspace my-eth-starter-frontend-project start",
     "ipfs": "yarn workspace my-eth-starter-frontend-project ipfs",
-    "chain": "yarn workspace my-eth-starter-hardhat-project chain",
-    "deploy": "yarn workspace my-eth-starter-hardhat-project deploy",
+    "chain": "export NODE_OPTIONS=--openssl-legacy-provider && yarn workspace my-eth-starter-hardhat-project chain",
+    "deploy": "export NODE_OPTIONS=--openssl-legacy-provider && yarn workspace my-eth-starter-hardhat-project deploy",
     "deploy:rinkeby": "yarn workspace my-eth-starter-hardhat-project deploy:rinkeby",
     "deploy:matic": "yarn workspace my-eth-starter-hardhat-project deploy:matic",
     "compile": "yarn workspace my-eth-starter-hardhat-project compile",
@@ -20,5 +20,6 @@
     "packages": [
       "./packages/*"
     ]
-  }
+  },
+  "dependencies": {}
 }

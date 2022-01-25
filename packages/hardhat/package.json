@@ -21,7 +21,7 @@
   },
   "scripts": {
     "clean": "npx hardhat clean",
-    "chain": "npx hardhat node",
+    "chain": "npx hardhat node --hostname 127.0.0.1",
     "compile": "npx hardhat compile",
     "deploy": "npx hardhat run scripts/deploy.ts --network localhost",
     "deploy:rinkeby": "npx hardhat run scripts/deploy.ts --network rinkeby",

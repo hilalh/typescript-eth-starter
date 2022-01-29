@@ -96,6 +96,8 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
                     </div>
                     {[
                       { path: '/', name: 'Greeter' },
+                      { path: '/wrap', name: 'Wrap' },
+                      { path: '/dress', name: 'Dress' },
                       { path: '/NFT', name: 'NFTs' },
                     ].map((route) => {
                       return (
